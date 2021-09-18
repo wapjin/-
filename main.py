@@ -140,9 +140,9 @@ class piao:
 
 
     def piao(self):
-        schedule.every().day.at("20:52").do(self.strs)
-        schedule.every().day.at("20:53").do(self.ends)
-        schedule.every().day.at("20:54").do(self.strs)
+        schedule.every().day.at("06:00").do(self.strs)
+        schedule.every().day.at("23:00").do(self.ends)
+
 
         while True:
             schedule.run_pending()
