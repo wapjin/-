@@ -5,13 +5,14 @@ if __name__ == '__main__':
     import requests,json
     import time
 
-    options = webdriver.ChromeOptions()
-    # 添加无界面参数
-    options.add_argument('--headless')
-    browser = webdriver.Chrome(options=options)
+    # options = webdriver.ChromeOptions()
+    # # 添加无界面参数
+    # options.add_argument('--headless')
+    # browser = webdriver.Chrome(options=options)
+    browser = webdriver.Chrome()
     while True:
         browser.get(
-            'https://kyfw.12306.cn/otn/leftTicket/init?linktypeid=dc&fs=%E4%BD%99%E5%A7%9A%E5%8C%97,CTH&ts=%E9%BA%BB%E5%9F%8E%E5%8C%97,MBN&date=2021-09-30&flag=N,N,Y')
+            'https://kyfw.12306.cn/otn/leftTicket/init?linktypeid=dc&fs=%E4%BD%99%E5%A7%9A%E5%8C%97,CTH&ts=%E9%BA%BB%E5%9F%8E%E5%8C%97,MBN&date=2021-09-19&flag=N,N,Y')
 
         time.sleep(1)
         browser.find_element_by_link_text("确认").click()
@@ -95,6 +96,7 @@ if __name__ == '__main__':
             }
 
             print(go.post("http://wxpusher.zjiecode.com/api/send/message", json=data2).text)
+            browser.quit()
             exit()
 
     # browser.get('https://kyfw.12306.cn/otn/resources/login.html')
