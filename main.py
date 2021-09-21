@@ -61,9 +61,9 @@ class piao:
             time.sleep(3)
             self.browser.find_element_by_link_text("账号登录").click()
             time.sleep(1)
-            self.browser.find_element_by_id("J-userName").send_keys("13285712265")  # 账号
+            self.browser.find_element_by_id("J-userName").send_keys("")  # 账号
             time.sleep(3)
-            self.browser.find_element_by_id("J-password").send_keys("jinjin00")  # 密码
+            self.browser.find_element_by_id("J-password").send_keys("")  # 密码
             time.sleep(5)
             self.browser.find_element_by_link_text("立即登录").click()
             time.sleep(2)
